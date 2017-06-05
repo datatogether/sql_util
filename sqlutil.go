@@ -33,9 +33,9 @@ type Transactable interface {
 }
 
 // Uniform Database
-func ConnectToDb(url string, db *sql.DB) error {
+func ConnectToDb(driverName, url string, db *sql.DB) error {
 	for i := 0; i < 1000; i++ {
-		conn, err := SetupConnection(url)
+		conn, err := SetupConnection(driverName, url)
 		if err != nil {
 			fmt.Println(err)
 			time.Sleep(time.Second)
