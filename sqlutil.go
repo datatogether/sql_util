@@ -6,8 +6,6 @@ import (
 	"fmt"
 	"github.com/gchaincl/dotsql"
 	"time"
-
-	_ "github.com/lib/pq"
 )
 
 // Scannable unifies both *sql.Row & *sql.Rows, functions can accept
@@ -53,8 +51,8 @@ func ConnectToDb(url string, db *sql.DB) error {
 }
 
 // Sets up a connection with a given postgres db connection string
-func SetupConnection(connString string) (db *sql.DB, err error) {
-	db, err = sql.Open("postgres", connString)
+func SetupConnection(driverName, connString string) (db *sql.DB, err error) {
+	db, err = sql.Open(driverName, connString)
 	if err != nil {
 		return
 	}
