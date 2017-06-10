@@ -59,6 +59,15 @@ func SetupConnection(driverName, connString string) (db *sql.DB, err error) {
 	return
 }
 
+// EnsureTables checks for table existence, creating them from the schema file if not.
+func EnsureTables(db *sql.DB, schemaFilepath string, tables ...string) ([]string, error) {
+	sc, err := LoadSchemaCommands(schemaFilepath)
+	if err != nil {
+		return nil, fmt.Errorf("error loading schema file: %s", err)
+	}
+	return sc.Create(db, tables...)
+}
+
 // drops test data tables & re-inserts base data from sql/test_data.sql, based on
 // passed in table names
 // func InsertTestData(db *sql.DB, tables ...string) error {
