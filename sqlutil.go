@@ -64,22 +64,22 @@ func EnsureSeedData(db *sql.DB, schemaFilepath, dataFilepath string, tables ...s
 	// test query to check for database schema existence
 	sc, err := LoadSchemaCommands(schemaFilepath)
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	created, err = sc.Create(db, tables...)
 	if err != nil {
-		return err
+		return created, err
 	}
 
 	if len(created) > 0 {
 		dc, err := LoadDataCommands(dataFilepath)
 		if err != nil {
-			return err
+			return created, err
 		}
 
 		if err := dc.Reset(db, created...); err != nil {
-			return err
+			return created, err
 		}
 	}
 
