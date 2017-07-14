@@ -60,20 +60,20 @@ func SetupConnection(driverName, connString string) (db *sql.DB, err error) {
 }
 
 // EnsureSeedData runs "EnsureTables", and then injects seed data for any newly-created tables
-func EnsureSeedData(db *sql.DB, schemaFilepath, dataFilepath string, tables ...string) (err error) {
+func EnsureSeedData(db *sql.DB, schemaFilepath, dataFilepath string, tables ...string) (created []string, err error) {
 	// test query to check for database schema existence
 	sc, err := LoadSchemaCommands(schemaFilepath)
 	if err != nil {
 		return err
 	}
 
-	created, err := sc.Create(db, tables...)
+	created, err = sc.Create(db, tables...)
 	if err != nil {
 		return err
 	}
 
 	if len(created) > 0 {
-		dc, err := LoadDataCommands(schemaFilepath)
+		dc, err := LoadDataCommands(dataFilepath)
 		if err != nil {
 			return err
 		}
@@ -83,7 +83,7 @@ func EnsureSeedData(db *sql.DB, schemaFilepath, dataFilepath string, tables ...s
 		}
 	}
 
-	return nil
+	return created, nil
 }
 
 // EnsureTables checks for table existence, creating them from the schema file if not,
