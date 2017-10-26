@@ -20,8 +20,6 @@ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 PARTICULAR PURPOSE.
 
 See the [`LICENSE`](./LICENSE) file for details.
---
-    import "github.com/datatogether/sqlutil"
 
 ## Getting Involved
 
