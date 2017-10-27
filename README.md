@@ -6,7 +6,7 @@
 [![Slack](https://img.shields.io/badge/slack-Archivers-b44e88.svg?style=flat-square)](https://archivers-slack.herokuapp.com/)
 [![License](https://img.shields.io/github/license/datatogether/sqlutil.svg)](./LICENSE) 
 
-This Golang package provides utils for working with dotsql structs and abstractions for working with postgres databases.
+Golang package that provides utils for working with dotsql structs and abstractions for working with postgres databases.
 
 ## License & Copyright
 
@@ -35,8 +35,10 @@ Include in any Golang package with:
 
 `import "github.com/datatogether/sqlutil"`
 
-## Development
-
 Technical documentation can be built with `godoc .` or, if your `$GOPATH` and repo 
 structure is set up correctly, with something like `godoc -http=:6060 &` followed by 
 browsing to http://localhost:6060/pkg/github.com/datatogether.
+
+## Development
+
+Coming soon!
