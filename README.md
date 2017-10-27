@@ -23,9 +23,11 @@ See the [`LICENSE`](./LICENSE) file for details.
 
 ## Getting Involved
 
-We would love involvement from more people! If you notice any errors or would like to submit changes, please see our [Contributing Guidelines](./.github/CONTRIBUTING.md). 
+We would love involvement from more people! If you notice any errors or would like 
+to submit changes, please see our [Contributing Guidelines](./.github/CONTRIBUTING.md). 
 
-We use GitHub issues for [tracking bugs and feature requests](https://github.com/datatogether/REPONAME/issues) and Pull Requests (PRs) for [submitting changes](https://github.com/datatogether/REPONAME/pulls)
+We use GitHub issues for [tracking bugs and feature requests](https://github.com/datatogether/sqlutil/issues) 
+and Pull Requests (PRs) for [submitting changes](https://github.com/datatogether/sqlutil/pulls)
 
 ## Usage
 
@@ -35,4 +37,6 @@ Include in any Golang package with:
 
 ## Development
 
-Technical documentation can be built with `godoc .` or, if your `$GOPATH` and repo structure is set up correctly, with something like `godoc -http=:6060 &` followed by browsing to http://localhost:6060/pkg/github.com/datatogether.
+Technical documentation can be built with `godoc .` or, if your `$GOPATH` and repo 
+structure is set up correctly, with something like `godoc -http=:6060 &` followed by 
+browsing to http://localhost:6060/pkg/github.com/datatogether.
