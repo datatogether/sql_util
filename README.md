@@ -10,7 +10,7 @@ This Golang package provides utils for working with dotsql structs and abstracti
 
 ## License & Copyright
 
-Copyright (C) <year> Data Together
+Copyright (C) 2017 Data Together
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU Affero General Public License as published by the Free Software
 Foundation, version 3.0.
@@ -26,10 +26,6 @@ See the [`LICENSE`](./LICENSE) file for details.
 We would love involvement from more people! If you notice any errors or would like to submit changes, please see our [Contributing Guidelines](./.github/CONTRIBUTING.md). 
 
 We use GitHub issues for [tracking bugs and feature requests](https://github.com/datatogether/REPONAME/issues) and Pull Requests (PRs) for [submitting changes](https://github.com/datatogether/REPONAME/pulls)
-
-## [Optional section(s) on Installation (actually using the service!), Architecture, Dependencies, and Other Considerations]
-
-[fill  out this section if the repo contains deployable/installable code]
 
 ## Usage
 
